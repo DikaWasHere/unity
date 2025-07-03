@@ -1,8 +1,7 @@
-# unity
-Corona Dodge (atau Nama Game Anda)
-Sebuah game 2D endless runner sederhana yang dibuat dengan Unity di mana pemain harus menghindari rintangan untuk mendapatkan skor tertinggi. Game ini dibuat sebagai proyek belajar untuk memahami mekanisme dasar Unity.
+🎮 Corona Dodge (atau Ganti dengan Nama Game Anda)
+Corona Dodge adalah game 2D endless runner sederhana yang dibuat menggunakan Unity. Pemain mengontrol sebuah suntikan (vaksin) untuk menghindari rintangan dan meraih skor setinggi mungkin. Game ini dikembangkan sebagai proyek pembelajaran untuk memahami mekanisme dasar Unity.
 
-Daftar Isi
+📑 Daftar Isi
 Tentang Game
 
 Fitur
@@ -17,78 +16,74 @@ Setup & Instalasi
 
 Lisensi
 
-Tentang Game
-Dalam game ini, Anda mengontrol sebuah suntikan (Player) yang bergerak secara vertikal. Tujuannya adalah untuk bertahan hidup selama mungkin dari rintangan-rintangan yang muncul secara acak dari sisi kanan layar. Semakin lama Anda bertahan, semakin tinggi skor yang Anda dapatkan. Game berakhir ketika pemain menabrak salah satu rintangan.
+🧩 Tentang Game
+Dalam game ini, pemain mengendalikan sebuah suntikan yang bergerak secara vertikal. Rintangan akan muncul dari sisi kanan layar secara acak. Pemain harus bertahan hidup selama mungkin tanpa menabrak rintangan untuk mendapatkan skor tertinggi. Permainan berakhir jika pemain bertabrakan dengan rintangan.
 
-Fitur
-Gerakan Pemain Vertikal: Kontrol pemain yang responsif hanya pada sumbu Y.
+✨ Fitur
+Gerakan Vertikal: Pemain hanya bisa bergerak ke atas dan bawah.
 
-Skor Berbasis Waktu: Skor akan terus bertambah seiring waktu pemain bertahan hidup.
+Skor Dinamis: Skor bertambah secara otomatis berdasarkan waktu bermain.
 
-Spawn Rintangan Acak: Rintangan muncul secara berkala pada posisi vertikal yang acak, membuat setiap sesi permainan unik.
+Rintangan Acak: Rintangan muncul secara berkala dengan posisi vertikal acak.
 
-Looping Background: Latar belakang yang bergerak terus-menerus untuk memberikan ilusi gerakan tanpa akhir.
+Latar Bergerak: Background game terus bergerak untuk menciptakan efek endless scrolling.
 
-Sistem Game Over & Restart: Ketika pemain hancur, panel Game Over akan muncul dengan opsi untuk memulai ulang permainan.
+Sistem Game Over: UI Game Over muncul ketika pemain kalah, lengkap dengan tombol restart.
 
-Musik Latar Persisten: Musik latar akan terus bermain bahkan setelah permainan di-restart, tanpa memulai dari awal (menggunakan Singleton Pattern).
+Musik Latar Persisten: Musik tetap berjalan saat restart berkat penggunaan Singleton Pattern.
 
-Manajemen Scene: Memuat ulang scene permainan saat ini untuk fungsionalitas restart.
+Manajemen Scene: Restart dilakukan dengan me-reload scene saat ini.
 
-Cara Bermain
-Gerak ke Atas: Tekan tombol W atau Panah Atas.
+🎮 Cara Bermain
+Aksi	Tombol
+Gerak ke Atas	W atau ↑ (Panah Atas)
+Gerak ke Bawah	S atau ↓ (Panah Bawah)
 
-Gerak ke Bawah: Tekan tombol S atau Panah Bawah.
+Tujuan: Hindari semua rintangan dan capai skor setinggi mungkin!
 
-Tujuan: Hindari semua rintangan yang datang untuk mencapai skor setinggi mungkin!
+🔧 Dibuat Menggunakan
+Game Engine: Unity 2022.3.6f1
 
-Dibuat Menggunakan
-Game Engine: Unity Engine (versi 2022.3.6f1 berdasarkan screenshot Anda)
+Bahasa Pemrograman: C#
 
-Bahasa: C#
+🗂️ Struktur Proyek
+Penjelasan singkat skrip utama:
 
-Struktur Proyek
-Berikut adalah penjelasan singkat dari skrip-skrip utama yang digunakan dalam game ini:
+Skrip	Deskripsi
+Player.cs	Mengatur gerakan vertikal pemain berdasarkan input keyboard.
+Obstacle.cs	Mengelola tabrakan antara pemain dan rintangan serta penghancuran diri saat melewati layar.
+SpawnObstacles.cs	Memunculkan rintangan secara acak di posisi vertikal.
+LoopingBackground.cs	Membuat efek scrolling pada latar belakang.
+CameraMovement.cs	(Opsional) Menggerakkan kamera untuk ilusi gerakan maju.
+ScoreManager.cs	Menghitung dan menampilkan skor berdasarkan waktu bermain.
+GameOver.cs	Menampilkan UI Game Over dan memuat ulang permainan saat diperlukan.
+BackgroundMusic.cs	Mengelola musik latar agar tetap berjalan antar restart scene menggunakan Singleton Pattern.
 
-Player.cs: Mengatur gerakan pemain secara vertikal berdasarkan input dari keyboard.
+🛠️ Setup & Instalasi
+Clone repositori ini
 
-Obstacle.cs: Mengatur logika untuk rintangan. Skrip ini akan menghancurkan pemain jika terjadi tabrakan, dan menghancurkan dirinya sendiri jika menyentuh batas layar.
+bash
+Copy
+Edit
+git clone https://github.com/DikaWasHere/unity
+Buka proyek di Unity Hub
 
-SpawnObstacles.cs: Bertanggung jawab untuk memunculkan prefab rintangan secara berkala pada posisi Y yang acak di luar layar.
+Jalankan Unity Hub.
 
-LoopingBackground.cs: Menggerakkan tekstur material latar belakang untuk menciptakan efek scrolling atau looping yang tak terbatas.
+Klik Open atau Add Project from Disk.
 
-CameraMovement.cs: Menggerakkan kamera ke kanan dengan kecepatan konstan (jika digunakan untuk membuat ilusi pemain bergerak maju).
+Arahkan ke folder hasil clone tadi.
 
-ScoreManager.cs: Menghitung skor berdasarkan waktu bertahan hidup pemain dan menampilkannya ke UI Text.
+Pastikan versi Unity sesuai
 
-GameOver.cs: Mendeteksi jika GameObject pemain sudah tidak ada lagi di scene, lalu menampilkan panel UI Game Over dan menyediakan fungsi untuk me-restart permainan.
+Proyek ini menggunakan Unity 2022.3.6f1. Disarankan untuk menggunakan versi yang sama atau kompatibel.
 
-BackgroundMusic.cs: Menggunakan pola Desain Singleton untuk memastikan hanya ada satu instance musik latar di seluruh sesi permainan dan tidak ikut hancur saat memuat ulang scene.
+Jalankan game
 
-Setup & Instalasi
-Untuk menjalankan proyek ini di komputer Anda:
-
-Clone repositori ini:
-
-Bash
-
-git clone [https://link-ke-repositori-ini.git](https://github.com/DikaWasHere/unity)
-Buka proyek di Unity Hub:
-
-Buka Unity Hub.
-
-
-Klik "Open" atau "Add project from disk".
-
-Arahkan ke folder yang baru saja Anda clone.
-
-Pastikan versi Unity sesuai:
-
-Proyek ini dibuat menggunakan Unity 2022.3.6f1. Pastikan Anda memiliki versi ini atau yang kompatibel.
-
-Jalankan Game:
-
-Buka scene utama (misalnya SampleScene) dari jendela Project.
+Buka scene utama, contoh: SampleScene.
 
 Tekan tombol Play di Unity Editor.
+
+📄 Lisensi
+Proyek ini dikembangkan sebagai bahan belajar. Anda bebas menggunakan, memodifikasi, dan menyebarluaskan proyek ini sesuai kebutuhan.
+
