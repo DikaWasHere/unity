@@ -73,10 +73,11 @@ Clone repositori ini:
 
 Bash
 
-git clone https://link-ke-repositori-ini.git
+git clone [https://link-ke-repositori-ini.git](https://github.com/DikaWasHere/unity)
 Buka proyek di Unity Hub:
 
 Buka Unity Hub.
+
 
 Klik "Open" atau "Add project from disk".
 
